@@ -44,16 +44,16 @@ export function LoginScreen() {
     <div className="bg-geo flex min-h-dvh flex-col items-center justify-center px-6 py-10 landscape:py-4">
       <div className="w-full max-w-sm rounded-2xl border border-border bg-card p-7 shadow-[0_20px_60px_-30px_rgba(20,40,90,0.35)] landscape:max-w-2xl landscape:p-6 landscape:grid landscape:grid-cols-2 landscape:gap-6 landscape:items-center">
         <div className="mb-8 flex flex-col items-center text-center landscape:mb-0 landscape:text-left landscape:items-start">
-          <img src={logo} alt="Stockube logo" className="h-16 w-16 object-contain landscape:h-12 landscape:w-12" />
-          <h1 className="mt-3 text-2xl font-bold tracking-tight text-navy-brand landscape:mt-2 landscape:text-xl">Stockube</h1>
-          <p className="mt-1 text-sm text-muted-foreground landscape:text-xs">Gestão de estoque para makers</p>
+          <img src={logo} alt="GEAR logo" className="h-16 w-16 object-contain landscape:h-12 landscape:w-12" />
+          <h1 className="mt-3 text-2xl font-bold tracking-tight text-navy-brand landscape:mt-2 landscape:text-xl">GEAR Inventário</h1>
+          {/* <p className="mt-1 text-sm text-muted-foreground landscape:text-xs">Gestão de estoque para makers</p> */}
         </div>
 
         <button
           type="button"
           onClick={handleGoogleLogin}
           disabled={loading}
-          className="flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-white px-4 py-3.5 text-sm font-semibold text-navy-brand shadow-sm transition active:scale-[0.98] hover:bg-slate-50 disabled:opacity-70"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold text-white shadow-sm transition active:scale-[0.98] hover:bg-card/80 disabled:opacity-70"
         >
           {loading ? (
             <Loader2 className="h-5 w-5 animate-spin text-navy-brand/50" />

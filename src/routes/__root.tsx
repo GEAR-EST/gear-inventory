@@ -73,10 +73,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Stockube — Gestão de estoque para makers" },
+      { title: "GEAR Inventário" },
       { name: "description", content: "App mobile-first para entrada, saída e histórico de estoque com leitura de QR Code." },
-      { name: "author", content: "Stockube" },
-      { property: "og:title", content: "Stockube — Gestão de estoque" },
+      { name: "author", content: "GEAR Inventário" },
+      { property: "og:title", content: "GEAR Inventário" },
       { property: "og:description", content: "Controle de inventário simples e moderno para labs e makerspaces." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
