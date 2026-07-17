@@ -84,7 +84,7 @@ export function InventoryTab() {
       </header>
 
       {areas.length === 0 ? (
-        <div className="text-center py-10 bg-slate-50 border rounded-2xl border-dashed p-6">
+        <div className="text-center py-10 bg-card border rounded-2xl border-dashed p-6">
           <MapPin className="h-10 w-10 text-muted-foreground/60 mx-auto mb-3" />
           <p className="text-sm text-muted-foreground font-medium">
             Nenhuma área cadastrada no momento.
@@ -123,7 +123,7 @@ export function InventoryTab() {
                         {criticalCount} crítico{criticalCount > 1 ? "s" : ""}
                       </span>
                     )}
-                    <ArrowRight className="h-4 w-4 text-slate-400" />
+                    <ArrowRight className="h-4 w-4 text-muted-foreground/80" />
                   </div>
                 </div>
               </button>
@@ -197,7 +197,7 @@ function AreaDetailsModal({ area, onClose }: { area: Area; onClose: () => void }
         <div className="flex items-center justify-between border-b pb-3 mb-5">
           <button
             onClick={onClose}
-            className="rounded-full border border-border bg-card p-2 text-navy-brand transition hover:bg-slate-100"
+            className="rounded-full border border-border bg-card p-2 text-navy-brand transition hover:bg-card/90"
             aria-label="Fechar"
           >
             <X className="h-4 w-4" />
@@ -209,12 +209,12 @@ function AreaDetailsModal({ area, onClose }: { area: Area; onClose: () => void }
         </div>
 
         {/* TABS */}
-        <div className="mb-5 flex rounded-xl bg-slate-100 p-1">
+        <div className="mb-5 flex rounded-xl bg-card p-1">
           <button
             onClick={() => setActiveTab("qr")}
             className={`flex-1 flex items-center justify-center gap-1.5 rounded-lg py-2.5 text-xs font-semibold transition ${activeTab === "qr"
-              ? "bg-white text-navy-brand shadow-sm"
-              : "text-slate-500 hover:text-navy-brand"
+              ? "bg-card text-white shadow-sm"
+              : "text-muted-foreground hover:text-white"
               }`}
           >
             <QrCode className="h-3.5 w-3.5" />
@@ -223,8 +223,8 @@ function AreaDetailsModal({ area, onClose }: { area: Area; onClose: () => void }
           <button
             onClick={() => setActiveTab("items")}
             className={`flex-1 flex items-center justify-center gap-1.5 rounded-lg py-2.5 text-xs font-semibold transition ${activeTab === "items"
-              ? "bg-white text-navy-brand shadow-sm"
-              : "text-slate-500 hover:text-navy-brand"
+              ? "bg-card text-white shadow-sm"
+              : "text-muted-foreground hover:text-white"
               }`}
           >
             <ClipboardList className="h-3.5 w-3.5" />
@@ -236,7 +236,7 @@ function AreaDetailsModal({ area, onClose }: { area: Area; onClose: () => void }
         <div className="overflow-y-auto flex-1 pb-4">
           {activeTab === "qr" ? (
             <div className="flex flex-col landscape:flex-row items-center justify-center py-4 space-y-4 landscape:space-y-0 landscape:gap-6">
-              <div className="rounded-2xl border-4 border-cyan-brand/20 bg-white p-3 shadow-lg shadow-cyan-brand/10 shrink-0">
+              <div className="rounded-2xl border-4 border-secondary/20 bg-card p-3 shadow-lg shadow-secondary/15 shrink-0">
                 <QRCodeSVG
                   value={qrValue}
                   size={150}
@@ -258,7 +258,7 @@ function AreaDetailsModal({ area, onClose }: { area: Area; onClose: () => void }
           ) : (
             <div className="space-y-3">
               {!area.itens || area.itens.length === 0 ? (
-                <div className="text-center py-8 bg-slate-50 border rounded-xl border-dashed">
+                <div className="text-center py-8 bg-card border border-border rounded-xl border-dashed">
                   <p className="text-xs text-muted-foreground font-medium">
                     Nenhum componente vinculado a esta área.
                   </p>
@@ -324,7 +324,7 @@ function AreaDetailsModal({ area, onClose }: { area: Area; onClose: () => void }
 
         <button
           onClick={onClose}
-          className="mt-2 w-full rounded-xl bg-cyan-brand px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-brand/30 transition active:scale-[0.98] hover:brightness-105"
+          className="mt-2 w-full rounded-xl bg-secondary px-4 py-3 text-sm font-semibold text-secondary-foreground shadow-lg shadow-secondary/30 transition active:scale-[0.98] hover:brightness-95"
         >
           Fechar
         </button>

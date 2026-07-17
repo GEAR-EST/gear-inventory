@@ -189,7 +189,7 @@ export function ReportTab() {
           <select
             value={selectedMonth}
             onChange={(e) => setSelectedMonth(e.target.value)}
-            className="w-full rounded-xl border border-border bg-card px-3.5 py-2.5 text-xs font-semibold text-navy-brand outline-none focus:border-cyan-brand focus:ring-2 focus:ring-cyan-brand/10 transition shadow-sm"
+            className="w-full rounded-xl border border-border bg-card px-3.5 py-2.5 text-xs font-semibold text-foreground outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition shadow-sm"
           >
             {monthOptions.map((opt) => (
               <option key={opt.value} value={opt.value}>
@@ -221,19 +221,18 @@ export function ReportTab() {
 
       <div className="relative mb-4">
         <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-          <Search className="h-4 w-4 text-slate-400" />
+          <Search className="h-4 w-4 text-muted-foreground" />
         </span>
         <input
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Buscar por item ou local..."
-          className="w-full rounded-xl border border-border bg-card pl-10 pr-4 py-2.5 text-xs text-navy-brand outline-none focus:border-cyan-brand focus:ring-2 focus:ring-cyan-brand/10 transition shadow-sm"
+          className="w-full rounded-xl border border-border bg-card pl-10 pr-4 py-2.5 text-xs text-foreground outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/30 transition shadow-sm"
         />
       </div>
-
       {filteredItems.length === 0 ? (
-        <div className="text-center py-10 bg-slate-50 border rounded-2xl border-dashed p-6">
+        <div className="text-center py-10 bg-card border rounded-2xl border-dashed p-6">
           <AlertCircle className="h-10 w-10 text-muted-foreground/60 mx-auto mb-3" />
           <p className="text-sm text-muted-foreground font-medium">Nenhum resultado encontrado.</p>
         </div>
@@ -241,7 +240,7 @@ export function ReportTab() {
         <div className="overflow-x-auto rounded-2xl border border-border bg-card shadow-sm">
           <table className="min-w-[640px] w-full text-left text-xs">
             <thead>
-              <tr className="border-b border-border bg-slate-50/75 text-[10px] uppercase tracking-wider text-navy-brand/70">
+              <tr className="border-b border-border bg-card/90 text-[10px] uppercase tracking-wider text-muted-foreground/75">
                 <th className="px-4 py-3 font-bold">Item</th>
                 <th className="px-4 py-3 font-bold">Local</th>
                 <th className="px-4 py-3 font-bold text-center">Base</th>
@@ -268,7 +267,7 @@ export function ReportTab() {
                   <tr
                     key={item.id}
                     onClick={() => setSelectedItem(item)}
-                    className="cursor-pointer border-b border-border/60 transition last:border-b-0 hover:bg-slate-50 active:bg-slate-100"
+                    className="cursor-pointer border-b border-border/60 transition last:border-b-0 hover:bg-card/90 active:bg-card/80"
                   >
                     <td className="px-4 py-3.5 font-bold text-navy-brand">
                       <div className="flex items-center gap-2">
@@ -337,7 +336,7 @@ function MovementsModal({ item, onClose }: { item: ItemReport; onClose: () => vo
         <div className="flex items-center justify-between border-b pb-3 mb-4">
           <button
             onClick={onClose}
-            className="rounded-full border border-border bg-card p-2 text-navy-brand transition hover:bg-slate-100"
+            className="rounded-full border border-border bg-card p-2 text-navy-brand transition hover:bg-card/90"
             aria-label="Fechar"
           >
             <X className="h-4 w-4" />
@@ -361,7 +360,7 @@ function MovementsModal({ item, onClose }: { item: ItemReport; onClose: () => vo
         {/* TIMELINE */}
         <div className="overflow-y-auto flex-1 pb-4">
           {sortedMovements.length === 0 ? (
-            <div className="text-center py-8 bg-slate-50 border rounded-xl border-dashed">
+            <div className="text-center py-8 bg-card border rounded-xl border-dashed">
               <p className="text-xs text-muted-foreground font-medium">
                 Nenhuma movimentação registrada.
               </p>
