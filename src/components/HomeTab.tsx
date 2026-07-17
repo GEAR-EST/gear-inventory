@@ -408,12 +408,12 @@ export function HomeTab() {
         </header>
 
         {/* SUB MODE TABS (Samsung Ocean Styled) */}
-        <div className="mb-5 flex rounded-xl bg-slate-100 p-1">
+        <div className="mb-5 flex rounded-xl bg-card p-1">
           <button
             onClick={() => setCreateSubMode("item")}
             className={`flex-1 rounded-lg py-2 text-xs font-semibold transition ${createSubMode === "item"
-              ? "bg-white text-navy-brand shadow-sm"
-              : "text-slate-500 hover:text-navy-brand"
+              ? "bg-card text-white shadow-sm"
+              : "text-muted-foreground hover:text-white"
               }`}
           >
             Item
@@ -421,8 +421,8 @@ export function HomeTab() {
           <button
             onClick={() => setCreateSubMode("area")}
             className={`flex-1 rounded-lg py-2 text-xs font-semibold transition ${createSubMode === "area"
-              ? "bg-white text-navy-brand shadow-sm"
-              : "text-slate-500 hover:text-navy-brand"
+              ? "bg-card text-white shadow-sm"
+              : "text-muted-foreground hover:text-white"
               }`}
           >
             Área / Local
@@ -561,7 +561,7 @@ export function HomeTab() {
       {scanStep === "scanning" && (
         <div className="flex flex-col landscape:flex-row landscape:gap-6 landscape:items-center">
           <div className="w-full landscape:w-1/2 landscape:max-w-xs shrink-0">
-            <div className="scanner-frame aspect-square w-full bg-slate-900 rounded-2xl overflow-hidden relative border-2 border-dashed border-cyan-brand/50">
+            <div className="scanner-frame aspect-square w-full bg-card/90 rounded-2xl overflow-hidden relative border-2 border-dashed border-secondary/40">
               <div id="home-qr-reader" className="w-full h-full object-cover"></div>
               {loading && (
                 <div className="absolute inset-0 bg-navy-brand/40 flex items-center justify-center">
@@ -572,8 +572,8 @@ export function HomeTab() {
           </div>
 
           <div className="flex-1 w-full space-y-4 mt-4 landscape:mt-0">
-            <div className="text-center bg-slate-50 border p-3 rounded-xl">
-              <p className="text-xs font-semibold text-navy-brand/80">
+            <div className="text-center bg-card border border-border p-3 rounded-xl">
+              <p className="text-xs font-semibold text-muted-foreground">
                 Escaneie o QR Code fixado no Local
               </p>
             </div>
@@ -606,7 +606,7 @@ export function HomeTab() {
             <h2 className="text-xl font-bold text-navy-brand">{scannedArea.nome}</h2>
 
             {areaItens.length === 0 && (
-              <div className="text-center py-4 bg-slate-50 rounded-xl border mt-3">
+              <div className="text-center py-4 bg-card rounded-xl border border-border mt-3">
                 <p className="text-sm text-muted-foreground mb-3">
                   Este local não possui componentes cadastrados.
                 </p>
@@ -646,7 +646,7 @@ export function HomeTab() {
                   <button
                     type="button"
                     onClick={() => setQty((q) => Math.max(1, q - 1))}
-                    className="w-12 shrink-0 bg-slate-50/50 text-lg font-bold text-navy-brand transition hover:bg-slate-100 active:bg-slate-200"
+                    className="w-12 shrink-0 bg-muted text-lg font-bold text-white transition hover:bg-muted/80 active:bg-muted/70"
                   >
                     ÔêÆ
                   </button>
@@ -660,7 +660,7 @@ export function HomeTab() {
                   <button
                     type="button"
                     onClick={() => setQty((q) => q + 1)}
-                    className="w-12 shrink-0 bg-slate-50/50 text-lg font-bold text-navy-brand transition hover:bg-slate-100 active:bg-slate-200"
+                    className="w-12 shrink-0 bg-muted text-lg font-bold text-white transition hover:bg-muted/80 active:bg-muted/70"
                   >
                     +
                   </button>
@@ -670,10 +670,10 @@ export function HomeTab() {
               <button
                 onClick={handleCommitTransaction}
                 disabled={loading}
-                className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3.5 text-sm font-semibold text-white shadow-lg transition active:scale-[0.98]"
+                className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3.5 text-sm font-semibold text-secondary-foreground shadow-lg transition active:scale-[0.98]"
                 style={{
                   backgroundColor: isIn ? "var(--magenta-brand)" : "var(--orange-brand)",
-                  boxShadow: `0 10px 15px -3px rgba(${isIn ? "226, 0, 116" : "255, 106, 0"}, 0.3)`,
+                  boxShadow: `0 10px 15px -3px rgba(${isIn ? "226, 0, 116" : "255, 106, 0"}, 0.25)`,
                 }}
               >
                 {loading ? (

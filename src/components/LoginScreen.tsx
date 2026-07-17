@@ -53,7 +53,7 @@ export function LoginScreen() {
           type="button"
           onClick={handleGoogleLogin}
           disabled={loading}
-          className="flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-white px-4 py-3.5 text-sm font-semibold text-navy-brand shadow-sm transition active:scale-[0.98] hover:bg-slate-50 disabled:opacity-70"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold text-white shadow-sm transition active:scale-[0.98] hover:bg-card/80 disabled:opacity-70"
         >
           {loading ? (
             <Loader2 className="h-5 w-5 animate-spin text-navy-brand/50" />

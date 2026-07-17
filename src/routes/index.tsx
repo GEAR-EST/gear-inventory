@@ -63,11 +63,11 @@ function AppContent({
 
   return (
     <div className="mx-auto flex h-dvh max-w-md flex-col bg-background landscape:grid landscape:grid-cols-[auto_1fr] landscape:grid-rows-[auto_1fr] landscape:max-w-4xl overflow-hidden">
-      <header className="sticky top-0 z-30 flex items-center justify-between border-b border-border bg-cyan-brand px-5 py-3.5 text-white shadow-sm landscape:relative landscape:col-start-2 landscape:row-start-1 w-full min-w-0 overflow-hidden shrink-0">
+      <header className="sticky top-0 z-30 flex items-center justify-between border-b border-border bg-card px-5 py-3.5 text-white shadow-sm landscape:relative landscape:col-start-2 landscape:row-start-1 w-full min-w-0 overflow-hidden shrink-0">
         <div className="flex items-center gap-2.5">
           <button
             onClick={toggleSidebar}
-            className="hidden landscape:flex items-center justify-center rounded-lg bg-white/15 p-2 text-white transition hover:bg-white/25 mr-1 shrink-0 cursor-pointer"
+            className="hidden landscape:flex items-center justify-center rounded-lg bg-card/40 p-2 text-white transition hover:bg-card/60 mr-1 shrink-0 cursor-pointer"
             aria-label="Toggle Menu"
           >
             <PanelLeft className={`h-4 w-4 transition-transform duration-300 ${isExpanded ? "" : "rotate-180"}`} />
@@ -87,8 +87,8 @@ function AppContent({
             <span
               className={`mt-0.5 rounded-full px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${
                 authUser?.cargo === "admin"
-                  ? "bg-cyan-300/30 text-cyan-100"
-                  : "bg-white/15 text-white/70"
+                  ? "bg-secondary/20 text-secondary-foreground"
+                  : "bg-card/60 text-muted-foreground"
               }`}
             >
               {authUser?.cargo}
@@ -96,7 +96,7 @@ function AppContent({
           </div>
           <button
             onClick={signOut}
-            className="rounded-full bg-white/15 p-2 text-white transition hover:bg-white/25"
+            className="rounded-full bg-card/50 p-2 text-white transition hover:bg-card/70"
             aria-label="Sair"
           >
             <LogOut className="h-4 w-4" />

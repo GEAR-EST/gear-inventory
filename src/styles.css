@@ -41,41 +41,41 @@
 :root {
   --radius: 0.875rem;
 
-  /* Brand palette extracted from logo */
-  --cyan-brand: oklch(0.72 0.16 230);     /* logo cyan panels */
-  --cyan-soft: oklch(0.95 0.04 230);
-  --magenta-brand: oklch(0.62 0.27 350);  /* logo magenta */
-  --magenta-soft: oklch(0.95 0.04 350);
-  --orange-brand: oklch(0.72 0.19 50);    /* logo orange */
-  --orange-soft: oklch(0.96 0.04 60);
-  --navy-brand: oklch(0.32 0.13 265);     /* deep navy outline */
+  /* Night mode palette */
+  --cyan-brand: #F6CEFF;
+  --cyan-soft: rgba(246, 206, 255, 0.14);
+  --magenta-brand: #E1B2FF;
+  --magenta-soft: rgba(225, 178, 255, 0.12);
+  --orange-brand: #CFA6FF;
+  --orange-soft: rgba(207, 166, 255, 0.1);
+  --navy-brand: #FFFFFF;
 
-  --background: oklch(0.985 0.003 250);
-  --foreground: var(--navy-brand);
+  --background: #09040A;
+  --foreground: #FFFFFF;
 
-  --card: oklch(1 0 0);
-  --card-foreground: var(--navy-brand);
-  --popover: oklch(1 0 0);
-  --popover-foreground: var(--navy-brand);
+  --card: #100712;
+  --card-foreground: #FFFFFF;
+  --popover: #110A14;
+  --popover-foreground: #FFFFFF;
 
-  --primary: var(--cyan-brand);
-  --primary-foreground: oklch(1 0 0);
+  --primary: #09040A;
+  --primary-foreground: #FFFFFF;
 
-  --secondary: oklch(0.96 0.01 250);
-  --secondary-foreground: var(--navy-brand);
+  --secondary: #F6CEFF;
+  --secondary-foreground: #09040A;
 
-  --muted: oklch(0.96 0.01 250);
-  --muted-foreground: oklch(0.5 0.04 260);
+  --muted: #120612;
+  --muted-foreground: #D9D0E6;
 
-  --accent: var(--cyan-soft);
-  --accent-foreground: var(--navy-brand);
+  --accent: #F6CEFF;
+  --accent-foreground: #09040A;
 
-  --destructive: oklch(0.6 0.23 25);
-  --destructive-foreground: oklch(1 0 0);
+  --destructive: #D17EFF;
+  --destructive-foreground: #09040A;
 
-  --border: oklch(0.91 0.012 250);
-  --input: oklch(0.91 0.012 250);
-  --ring: var(--cyan-brand);
+  --border: #2B1734;
+  --input: #190815;
+  --ring: #F6CEFF;
 }
 
 @layer base {
