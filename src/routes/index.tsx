@@ -36,7 +36,7 @@ function AppGate() {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background">
         <div className="flex flex-col items-center gap-3">
-          <img src={logo} alt="Stockube" className="h-12 w-12 object-contain animate-pulse" />
+          <img src={logo} alt="GEAR" className="h-12 w-12 object-contain animate-pulse" />
         </div>
       </div>
     );
@@ -74,8 +74,8 @@ function AppContent({
           </button>
           <img src={logo} alt="" className="h-7 w-7 object-contain" />
           <div>
-            <h1 className="text-base font-bold leading-tight">Stockube</h1>
-            <p className="text-[10px] uppercase tracking-wider text-white/80">Lab Maker</p>
+            <h1 className="text-base font-bold leading-tight">GEAR Inventário</h1>
+            {/* <p className="text-[10px] uppercase tracking-wider text-white/80">Lab Maker</p> */}
           </div>
         </div>
 
