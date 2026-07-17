@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">InventoryAPP</string>
+    <string name="title_activity_main">InventoryAPP</string>
+    <string name="package_name">com.fablab.inventoryapp</string>
+    <string name="custom_url_scheme">com.fablab.inventoryapp</string>
+</resources>
